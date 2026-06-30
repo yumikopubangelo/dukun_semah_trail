@@ -2,22 +2,22 @@ package com.example.dukunsemahtrail.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-// Vibrant Mountain Theme Colors
+// Vibrant Mountain Theme Colors - Energetic & High-Contrast
 // Light Scheme
-val PrimaryLight = Color(0xFF2D6A4F) // Dark Green
+val PrimaryLight = Color(0xFF1B4332) // Deep Forest Green
 val OnPrimaryLight = Color(0xFFFFFFFF)
-val PrimaryContainerLight = Color(0xFFB7E4C7)
+val PrimaryContainerLight = Color(0xFFD8F3DC) // Pale Spring Green
 val OnPrimaryContainerLight = Color(0xFF081C15)
 
-val SecondaryLight = Color(0xFF74C69D) // Sage Green
+val SecondaryLight = Color(0xFF40916C) // Lush Meadow Green
 val OnSecondaryLight = Color(0xFFFFFFFF)
-val SecondaryContainerLight = Color(0xFFD8F3DC)
+val SecondaryContainerLight = Color(0xFFB7E4C7)
 val OnSecondaryContainerLight = Color(0xFF1B4332)
 
-val TertiaryLight = Color(0xFFD4A373) // Earthy Orange/Tan
+val TertiaryLight = Color(0xFFBC6C25) // Vibrant Earthy Orange (Mountain Rock)
 val OnTertiaryLight = Color(0xFFFFFFFF)
-val TertiaryContainerLight = Color(0xFFFAEDCD)
-val OnTertiaryContainerLight = Color(0xFF432818)
+val TertiaryContainerLight = Color(0xFFFEFAE0) // Sand/Sunlight
+val OnTertiaryContainerLight = Color(0xFF283618)
 
 val ErrorLight = Color(0xFFBA1A1A)
 val OnErrorLight = Color(0xFFFFFFFF)
@@ -30,24 +30,24 @@ val SurfaceLight = Color(0xFFF8F9FA)
 val OnSurfaceLight = Color(0xFF1B1C1E)
 
 // Dark Scheme
-val PrimaryDark = Color(0xFF95D5B2)
+val PrimaryDark = Color(0xFF95D5B2) // Minty Green
 val OnPrimaryDark = Color(0xFF081C15)
-val PrimaryContainerDark = Color(0xFF1B4332)
+val PrimaryContainerDark = Color(0xFF2D6A4F)
 val OnPrimaryContainerDark = Color(0xFFD8F3DC)
 
 val SecondaryDark = Color(0xFF74C69D)
 val OnSecondaryDark = Color(0xFF081C15)
-val SecondaryContainerDark = Color(0xFF2D6A4F)
+val SecondaryContainerDark = Color(0xFF40916C)
 val OnSecondaryContainerDark = Color(0xFFB7E4C7)
 
-val TertiaryDark = Color(0xFFFAEDCD)
-val OnTertiaryDark = Color(0xFF432818)
-val TertiaryContainerDark = Color(0xFFD4A373)
-val OnTertiaryContainerDark = Color(0xFFFAEDCD)
+val TertiaryDark = Color(0xFFDDA15E) // Muted Rock Orange
+val OnTertiaryDark = Color(0xFF283618)
+val TertiaryContainerDark = Color(0xFFBC6C25)
+val OnTertiaryContainerDark = Color(0xFFFEFAE0)
 
-val BackgroundDark = Color(0xFF1B1C1E)
+val BackgroundDark = Color(0xFF0B120B) // Very Dark Forest
 val OnBackgroundDark = Color(0xFFE2E2E6)
-val SurfaceDark = Color(0xFF1B1C1E)
+val SurfaceDark = Color(0xFF0B120B)
 val OnSurfaceDark = Color(0xFFE2E2E6)
 
 // Legacy colors (keeping them to avoid unresolved references if any)

@@ -22,4 +22,7 @@ interface TrailDao {
 
     @Query("DELETE FROM trails")
     suspend fun deleteAllTrails()
+
+    @Query("SELECT COUNT(*) FROM trails")
+    suspend fun getTrailCount(): Int
 }

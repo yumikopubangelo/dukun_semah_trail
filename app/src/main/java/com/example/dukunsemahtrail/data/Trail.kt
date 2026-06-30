@@ -14,5 +14,6 @@ data class Trail(
     val description: String,
     val terrainType: String,
     val safetyWarnings: String,
+    val pathPointsJson: String, // JSON list of [lat, lng]
     val imageUrl: String? = null
 )

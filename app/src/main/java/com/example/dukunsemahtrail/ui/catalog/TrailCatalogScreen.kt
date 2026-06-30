@@ -13,8 +13,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.FilterList
-import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Terrain
 import androidx.compose.material.icons.rounded.Explore
 import androidx.compose.material.icons.rounded.Height
 import androidx.compose.material.icons.rounded.LocationOn
@@ -25,9 +23,9 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.SearchBar
-import androidx.compose.material3.SearchBarDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
@@ -99,21 +97,23 @@ fun TrailCatalogContent(
                 .padding(innerPadding)
                 .fillMaxSize()
         ) {
-            SearchBar(
-                query = searchQuery,
-                onQueryChange = onSearchQueryChange,
-                onSearch = { /* Not needed for real-time filtering */ },
-                active = false,
-                onActiveChange = { },
-                placeholder = { Text("Search trails or locations...") },
-                leadingIcon = { Icon(Icons.Rounded.Search, contentDescription = null) },
+            OutlinedTextField(
+                value = searchQuery,
+                onValueChange = onSearchQueryChange,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp, vertical = 8.dp),
-                colors = SearchBarDefaults.colors(
-                    containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
+                placeholder = { Text("Search trails or locations...") },
+                leadingIcon = { Icon(Icons.Rounded.Search, contentDescription = null) },
+                singleLine = true,
+                shape = MaterialTheme.shapes.extraLarge,
+                colors = OutlinedTextFieldDefaults.colors(
+                    unfocusedContainerColor = MaterialTheme.colorScheme.surfaceContainerHigh,
+                    focusedContainerColor = MaterialTheme.colorScheme.surfaceContainerHigh,
+                    unfocusedBorderColor = androidx.compose.ui.graphics.Color.Transparent,
+                    focusedBorderColor = MaterialTheme.colorScheme.primary
                 )
-            ) { }
+            )
 
             LazyColumn(
                 modifier = Modifier.fillMaxSize()
@@ -138,8 +138,8 @@ fun TrailCatalogPreview() {
     DukunSemahTrailTheme {
         TrailCatalogContent(
             trails = listOf(
-                Trail(1, "Mount Kinabalu", "Sabah, Malaysia", "Hard", 8.7, 2300, "", "", ""),
-                Trail(2, "Mount Rinjani", "Lombok, Indonesia", "Hard", 10.5, 2000, "", "", "")
+                Trail(1, "Mount Kinabalu", "Sabah, Malaysia", "Hard", 8.7, 2300, "", "", "", "[]"),
+                Trail(2, "Mount Rinjani", "Lombok, Indonesia", "Hard", 10.5, 2000, "", "", "", "[]")
             ),
             searchQuery = "",
             onSearchQueryChange = {},
